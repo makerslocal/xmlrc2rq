@@ -4,7 +4,7 @@ var mqtt = require('mqtt');
 var mqtt_client  = mqtt.connect('mqtt://iot');
 
 var PORT = 4455;
-var HOST = '10.56.0.12';
+var HOST = '0.0.0.0';
 
 var dgram = require('dgram');
 var server = dgram.createSocket('udp4');
