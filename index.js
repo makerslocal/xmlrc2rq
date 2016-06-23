@@ -17,7 +17,9 @@ server.on('listening', function () {
 server.on('message', function (message, remote) {
   parseString(message, function (err, result) {
       var res = result.rc['$'];
-      mqtt_client.publish('ml256/wiki/change', JSON.stringify(res));
+      var json = JSON.stringify(res);
+      mqtt_client.publish('ml256/wiki/change', json);
+      console.log(json);
   });
 });
 
